@@ -11,8 +11,6 @@ import { PagesComponent } from './pages.component';
 import { PAGES_ROUTES } from './pages.routes';
 
 
-
-
 @NgModule({
     declarations: [
         PagesComponent,
