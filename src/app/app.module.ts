@@ -14,6 +14,10 @@ import { APP_ROUTES } from './app.routes';
 // MODULOS
 import { PagesModule } from './pages/pages.module';
 
+// TEMPORAL
+import { FormsModule } from '@angular/forms';
+
+
 // Declaraciones
 @NgModule({
   declarations: [
@@ -26,7 +30,8 @@ import { PagesModule } from './pages/pages.module';
     BrowserModule,
     BrowserAnimationsModule,
     MaterializeModule,
-    PagesModule
+    PagesModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

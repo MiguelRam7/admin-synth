@@ -1,3 +1,44 @@
-<p>
-  graficas1 works!
-</p>
+<div class="row">
+    <div class="col s12 m6">
+     
+        <app-grafico-dona
+              [title]="graficos.grafico1.title"
+              [chartLabels]="graficos.grafico1.labels"
+              [chartData]="graficos.grafico1.data"
+              [chartType]="graficos.grafico1.type"
+        ></app-grafico-dona>
+
+    </div>
+
+    <div class="col s12 m6">
+        <app-grafico-dona
+              [title]="graficos.grafico2.title"
+              [chartLabels]="graficos.grafico2.labels"
+              [chartData]="graficos.grafico2.data"
+              [chartType]="graficos.grafico2.type"
+        ></app-grafico-dona>
+      </div>
+  </div>
+
+
+  <div class="row">
+      <div class="col s12 m6">
+       
+          <app-grafico-dona
+                [title]="graficos.grafico3.title"
+                [chartLabels]="graficos.grafico3.labels"
+                [chartData]="graficos.grafico3.data"
+                [chartType]="graficos.grafico3.type"
+          ></app-grafico-dona>
+  
+      </div>
+  
+      <div class="col s12 m6">
+          <app-grafico-dona
+                [title]="graficos.grafico4.title"
+                [chartLabels]="graficos.grafico4.labels"
+                [chartData]="graficos.grafico4.data"
+                [chartType]="graficos.grafico4.type"
+          ></app-grafico-dona>
+        </div>
+    </div>

@@ -1,0 +1,39 @@
+<h3>{{leyenda}}</h3>
+
+<div class="card blue-grey darken-1">
+  <div class="card-content white-text">
+    <span class="card-title">Total {{progreso}}</span>
+    <div class="row">
+
+      <div class="col s12 m6">
+        <a class="waves-effect waves-light btn" (click)="changeProgress(-5)">
+          <i class="material-icons left">cloud</i>
+          Rest
+        </a>
+      </div>
+
+      <div class="col s12 m6">
+        <a class="waves-effect waves-light btn" (click)="changeProgress(5)">
+          <i class="material-icons right">add</i>
+          Plus
+        </a>
+      </div>
+
+    </div>
+
+    <div class="row">
+        <div class="input-field col s12">
+          <input #txtProgress
+              name="progreso"
+              id="password" 
+              type="number" 
+              class="validate" 
+              [(ngModel)]="progreso" 
+              (ngModelChange)="onChange($event)"
+              min="1" max="100">
+          <label for="password">Password</label>
+        </div>
+      </div>
+
+  </div>
+</div>

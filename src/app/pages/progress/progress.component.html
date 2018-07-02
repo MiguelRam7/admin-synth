@@ -1,3 +1,22 @@
-<p>
-  progress works!
-</p>
+<div class="progress">
+  <div class="determinate" [style.width]="progreso1 + '%'" ></div>
+</div>
+<div class="progress">
+    <div class="determinate" [style.width]="progreso2 + '%'" ></div>
+  </div>
+
+
+<div class="row">
+
+
+  <div class="col s12 m6 ">
+      <app-incrementador (cambioProgreso)="progreso1=$event" leyenda="Progress azul" [progreso]="progreso1"></app-incrementador>
+  </div>
+
+  <div class="col s12 m6 ">
+      <app-incrementador (cambioProgreso)="progreso2=$event" leyenda="Progress verde" [progreso]="progreso2"></app-incrementador>
+  </div>
+
+
+</div>
+
