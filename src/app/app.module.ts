@@ -14,6 +14,9 @@ import { APP_ROUTES } from './app.routes';
 // MODULOS
 import { PagesModule } from './pages/pages.module';
 
+// SERVICIOS
+import { ServiceModule } from './services/service.module';
+
 // TEMPORAL
 import { FormsModule } from '@angular/forms';
 
@@ -31,6 +34,7 @@ import { FormsModule } from '@angular/forms';
     BrowserAnimationsModule,
     MaterializeModule,
     PagesModule,
+    ServiceModule,
     FormsModule
   ],
   providers: [],

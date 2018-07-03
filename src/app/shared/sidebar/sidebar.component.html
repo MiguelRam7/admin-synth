@@ -1,7 +1,19 @@
-<nav>
-  <ul id="slide-out" class="side-nav fixed">
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
-    <li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
+<nav></nav>
+<ul id="slide-out" class="side-nav fixed">
+  <li><a><i class="material-icons">account_circle</i>Account</a></li>
+  <li><a routerLink="/account-settings" routerLinkActive="" class="waves-effect">Account Settings</a></li>
+  <li><a routerLink="/login" routerLinkActive="" class="waves-effect">Logout</a></li>
+
+  <ul *ngFor="let menu of _sidebar.menu">
+    <li><a class="waves-effect">
+        <i class="material-icons">cloud</i>{{menu.title}}</a>
+    </li>
+    <li *ngFor="let submenu of menu.submenu">
+      <a [routerLink]="[submenu.url]" routerLinkActive="active">{{submenu.title}}</a>
+    </li>
   </ul>
-  
-</nav>
+
+</ul>
+
+
+
