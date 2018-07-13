@@ -12,28 +12,48 @@
 
         <div class="row">
 
-          <form class="col s12" (click)="ingresar()">
-
+          <form #forma="ngForm" (ngSubmit)="login(forma)" ngNativeValidate class="col s12" >
+        
             <div class="row">
-              <div class="input-field col s6">
-                <i class="material-icons prefix">account_circle</i>
-                <input id="icon_prefix" type="text">
-                <label for="icon_prefix">First Name</label>
-              </div>
-              <div class="input-field col s6">
-                <i class="material-icons prefix">phone</i>
-                <input id="icon_telephone" type="text">
-                <label for="icon_telephone">Telephone</label>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">email</i>
+                <input ngModel name="email" id="email_prefix" type="text" required>
+                <label for="email_prefix">Email</label>
               </div>
             </div>
-
-
+        
             <div class="row">
-                <a class="waves-effect waves-light btn" type="submit">Ingresar</a>
+              <div class="input-field col s12">
+                <i class="material-icons prefix">lock</i>
+                <input [ngModel]='email' name="password" id="password_prefix" type="password" required>
+                <label for="password_prefix">Password</label>
+              </div>
             </div>
+        
+            <p>
+              <input [(ngModel)]="recuerdame" name="recuerdame" type="checkbox" id="checkRecuerdame" [checked]="false" [disabled]="isDisabled?true:null"/>
+              <label for="checkRecuerdame">Recuerdame</label>
+            </p>
+        
+            <button class="btn waves-effect waves-light" type="submit" >Ingresar
+              <i class="material-icons right">send</i>
+            </button>
+            
+           
+         
           </form>
         </div>
 
+        <div>
+          <div class="row">
+              <a class="waves-effect waves-light btn red" id="btnGoogle" title="Login with google">G+</a>
+            
+            
+          </div>
+            <br>
+              No tienes una cuenta? <a routerLink="/register">Crear cuenta</a>
+          </div>
+       
       </div>
     </div>
   </div>

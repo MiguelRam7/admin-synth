@@ -1,8 +1,7 @@
 <nav></nav>
 <ul id="slide-out" class="side-nav fixed">
   <li><a><i class="material-icons">account_circle</i>Account</a></li>
-  <li><a routerLink="/account-settings" routerLinkActive="" class="waves-effect">Account Settings</a></li>
-  <li><a routerLink="/login" routerLinkActive="" class="waves-effect">Logout</a></li>
+  <li><a (click)="_usuarioService.logout()" class="waves-effect">Logout</a></li>
 
   <ul *ngFor="let menu of _sidebar.menu">
     <li><a class="waves-effect">

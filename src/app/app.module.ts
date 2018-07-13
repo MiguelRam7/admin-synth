@@ -18,7 +18,7 @@ import { PagesModule } from './pages/pages.module';
 import { ServiceModule } from './services/service.module';
 
 // TEMPORAL
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 // Declaraciones
@@ -35,7 +35,8 @@ import { FormsModule } from '@angular/forms';
     MaterializeModule,
     PagesModule,
     ServiceModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

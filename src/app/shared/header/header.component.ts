@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MaterializeDirective} from "angular2-materialize";
+import { UsuarioService } from '../../services/service.index';
 
 @Component({
   selector: 'app-header',
@@ -8,9 +9,11 @@ import {MaterializeDirective} from "angular2-materialize";
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _usuarioService:UsuarioService) { }
 
   ngOnInit() {
   }
+
+
 
 }

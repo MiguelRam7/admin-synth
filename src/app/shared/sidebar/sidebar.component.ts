@@ -3,7 +3,7 @@ import { MaterializeDirective, MaterializeAction } from "angular2-materialize";
 import { Location } from '@angular/common';
 
 
-import { SidebarService } from '../../services/service.index';
+import { SidebarService, UsuarioService } from '../../services/service.index';
 
 @Component({
   selector: 'app-sidebar',
@@ -13,6 +13,8 @@ import { SidebarService } from '../../services/service.index';
 export class SidebarComponent {
   shouldRun = [/(^|\.)plnkr\.co$/, /(^|\.)stackblitz\.io$/].some(h => h.test(window.location.host));
 
-  constructor(public _sidebar: SidebarService) {}
+  constructor(
+    public _sidebar: SidebarService,
+    public _usuarioService: UsuarioService) { }
 
 }

@@ -1,3 +1,54 @@
-<p>
-  register works!
-</p>
+<div class="row">
+
+  <form [formGroup]="forma" (ngSubmit)="registrarUsuario()" ngNativeValidate class="col s12" >
+
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">account_circle</i>
+        <input formControlName="nombre" name="name" id="name_prefix" required type="text">
+        <label for="name_prefix">Nombre</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">email</i>
+        <input formControlName="email" name="email" id="email_prefix" type="text">
+        <label for="email_prefix">Email</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">lock</i>
+        <input formControlName="password" name="password" id="password_prefix" type="password">
+        <label for="password_prefix">Password</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="input-field col s6">
+        <i class="material-icons prefix">lock</i>
+        <input formControlName="password2" name="password2" id="password2_prefix" type="password">
+        <label for="password2_prefix">Confirm Password</label>
+      </div>
+    </div>
+    
+    <span *ngIf="forma.errors?.sonIguales && !forma.pristine" class="red-text text-darken-2">Las contraseñas deben ser iguales</span>
+
+    <p>
+      <input formControlName="condiciones" name="condiciones" type="checkbox" id="checkCondiciones" [checked]="false" [disabled]="isDisabled?true:null"/>
+      <label for="checkCondiciones">Estoy de acuerdo con los terminos y condiciones</label>
+    </p>
+
+    <button class="btn waves-effect waves-light" type="submit" >Registrarme
+      <i class="material-icons right">send</i>
+    </button>
+
+    <div>
+        <br>
+          ¿Tienes una cuenta? <a routerLink="/login">Ingresar ahora</a>
+      </div>
+
+  </form>
+</div>
